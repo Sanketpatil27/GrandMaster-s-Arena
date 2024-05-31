@@ -3,6 +3,7 @@ const http = require('http');
 const socket = require('socket.io');
 const { Chess } = require('chess.js');
 const path = require('path');
+const PORT = 3000;
 
 const app = express();
 const server = http.createServer(app);
@@ -75,6 +76,6 @@ app.get("/", (req, res) => {
 })
 
 
-server.listen(3000, () => {
-    console.log("Grandmaster's Arena is running on PORT 3000");
+server.listen(PORT, () => {
+    console.log(`Grandmaster's Arena is running on PORT ${PORT}`);
 })
